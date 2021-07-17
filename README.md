@@ -4,3 +4,4 @@ Few concepts you will find in this repository are,
 
 * Parallel ForEach
 * Mirror API
+* Enum with associate types
