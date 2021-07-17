@@ -98,3 +98,34 @@ class ConfigureClass {
 ConfigureClass().configureManally()
 ConfigureClass().configureWithMirror()
 
+// MARK: - Enum with associate types
+/* Enum with associate types */
+
+enum NewProfessionType {
+    case error1(id: String, code: Int, description: String)
+    case error2(id: Int, newcode: Int, differentDescription: String)
+    
+    var description: String {
+        switch self {
+        case .error1(_, _ , let description),
+                .error2(_, _, let description):
+            return description
+        }
+    }
+}
+
+let abc = NewProfessionType.error2(id: 1,
+                                   newcode: 1,
+                                   differentDescription: "abc")
+
+// Two ways of accessing it
+// 1st
+print(abc.description)
+
+// 2nd
+if case let NewProfessionType.error2(id,
+                                     newcode,
+                                     differentDescription) = abc {
+    print(differentDescription)
+}
+    
