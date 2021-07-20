@@ -129,3 +129,27 @@ if case let NewProfessionType.error2(id,
     print(differentDescription)
 }
     
+
+// MARK: - Property Wrappers
+
+@propertyWrapper struct Capitalized {
+    var wrappedValue: String {
+        didSet { wrappedValue = wrappedValue.capitalized }
+    }
+
+    init(wrappedValue: String) {
+        self.wrappedValue = wrappedValue.capitalized
+    }
+}
+
+struct User {
+    @Capitalized var firstName: String
+    @Capitalized var lastName: String
+}
+
+var user = User(firstName: "Neel", lastName: "Singh")
+print(user.firstName)
+print(user.lastName)
+
+user.lastName = "Uday"
+print(user.lastName)
