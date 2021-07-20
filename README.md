@@ -6,7 +6,7 @@ Few concepts you will find in this repository are,
 * Mirror API
 * Enum with associate types
 * Property wrappers
-<- * HOTF - Map ->
+<--- * HOTF - Map --->
 <- * HOTF - FlatMap ->
 <- * HOTF - Drop ->
 <- * HOTF - DropLast ->
