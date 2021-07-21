@@ -6,7 +6,7 @@ Few concepts you will find in this repository are,
 * Mirror API
 * Enum with associate types
 * Property wrappers
-<!-- * Dynamic member lookup ->
+* Dynamic member lookup
 <!-- * @Escaping and @non Escaping closures ->
 <!-- * Will set and did set ->
 <!-- * Rethrows ->
