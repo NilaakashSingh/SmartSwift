@@ -155,3 +155,28 @@ user.lastName = "Uday"
 print(user.lastName)
 
 // MARK: - Dynamic member look up
+
+@dynamicMemberLookup
+struct Person {
+    subscript(dynamicMember member: String) -> String {
+        let properties = ["name": "Abc xyz", "city": "Venice"]
+        return properties[member, default: ""]
+    }
+}
+
+let person = Person()
+print(person.name)
+print(person.city)
+
+
+@dynamicMemberLookup
+struct NewObject {
+    subscript(dynamicMember member: String) -> (_ input: String) -> Void {
+        return {
+            print("Hello! I live at the address \($0).")
+        }
+    }
+}
+
+let newObject = NewObject()
+newObject.printAddress("555 Taylor Swift Avenue")
