@@ -180,3 +180,86 @@ struct NewObject {
 
 let newObject = NewObject()
 newObject.printAddress("555 Taylor Swift Avenue")
+
+// Json example of dynamic member lookup
+@dynamicMemberLookup
+enum JSON {
+   case intValue(Int)
+   case stringValue(String)
+   case arrayValue(Array<JSON>)
+   case dictionaryValue(Dictionary<String, JSON>)
+
+   var stringValue: String? {
+      if case .stringValue(let str) = self {
+         return str
+      }
+      return nil
+   }
+
+   subscript(index: Int) -> JSON? {
+      if case .arrayValue(let arr) = self {
+         return index < arr.count ? arr[index] : nil
+      }
+      return nil
+   }
+
+   subscript(key: String) -> JSON? {
+      if case .dictionaryValue(let dict) = self {
+         return dict[key]
+      }
+      return nil
+   }
+
+   subscript(dynamicMember member: String) -> JSON? {
+      if case .dictionaryValue(let dict) = self {
+         return dict[member]
+      }
+      return nil
+   }
+}
+
+let j = JSON.dictionaryValue([
+  "comment": .stringValue("Not being able to tell the difference at call site is confusing"),
+  "count": .intValue(42),
+  "count2": .intValue(1337)
+  ])
+
+
+@dynamicMemberLookup
+public struct DynamicLookupContext {
+  let value: Any
+
+  public subscript(dynamicMember member: String) -> DynamicLookupContext? {
+    let dict = value as? [String: Any]
+    guard let value = dict?[member] else { return nil }
+    return DynamicLookupContext(value: value)
+  }
+    
+  public subscript(index: Int) -> DynamicLookupContext? {
+    guard let array = value as? [Any] else { return nil }
+    return DynamicLookupContext(value: array[index])
+  }
+}
+
+public extension Dictionary where Key == String, Value: Any {
+  func dynamicLookup<T>(execute: (DynamicLookupContext) -> DynamicLookupContext?) -> T? {
+    let wrapped = DynamicLookupContext(value: self)
+    let result = execute(wrapped)
+    return result?.value as? T
+  }
+}
+
+
+
+let j2: [String: Any] = [
+  "name": "Olivier",
+  "address": [
+    "street": "Swift Street",
+    "number": 1337,
+    "city": "PlaygroundVille"
+  ]
+]
+
+print(j.count ?? 0)
+let street2: String? = j2.dynamicLookup { $0.address?.street }
+print(street2)
