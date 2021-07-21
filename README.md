@@ -6,7 +6,19 @@ Few concepts you will find in this repository are,
 * Mirror API
 * Enum with associate types
 * Property wrappers
-<!-- * HOTF - Map --->
+<!-- * Dynamic member lookup ->
+<!-- * @Escaping and @non Escaping closures ->
+<!-- * Will set and did set ->
+<!-- * Rethrows ->
+<!-- * Call as Function ->
+<!-- * Static String ->
+<!-- * Zip ->
+<!-- * Result ->
+<!-- * Discardable ->
+<!-- * Multiple line string ->
+<!-- * Private set ->
+<!-- * Enumerated ->
+<!-- * HOTF - Map ->
 <!-- * HOTF - FlatMap ->
 <!-- * HOTF - Drop ->
 <!-- * HOTF - DropLast ->
@@ -16,15 +28,3 @@ Few concepts you will find in this repository are,
 <!-- * HOTF - CaseIterable ->
 <!-- * HOTF - Dump ->
 <!-- * HOTF - Property Weak and unowned ->
-<!-- * @Escaping and @non Escaping closures ->
-<!-- * Will set and did set ->
-<!-- * Rethrows ->
-<!-- * Dynamic member lookup ->
-<!-- * Call as Function ->
-<!-- * Static String ->
-<!-- * Zip ->
-<!-- * Result ->
-<!-- * Discardable ->
-<!-- * Multiple line string ->
-<!-- * Private set ->
-<!-- * Enumerated ->
