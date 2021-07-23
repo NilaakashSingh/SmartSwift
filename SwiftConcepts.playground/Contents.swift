@@ -249,8 +249,6 @@ public extension Dictionary where Key == String, Value: Any {
   }
 }
 
-
-
 let j2: [String: Any] = [
   "name": "Olivier",
   "address": [
@@ -263,3 +261,22 @@ let j2: [String: Any] = [
 print(j.count ?? 0)
 let street2: String? = j2.dynamicLookup { $0.address?.street }
 print(street2)
+
+// MARK: - Map
+
+let empArray: [[String: Any]] = [
+  ["name": "Olivier",
+   "age": 30],
+  ["name": "Neel",
+   "age": 34],
+  ["name": "Nitin",
+   "age": 32],
+  ["name": "Mukesh",
+   "age": 21],
+  ["name": "Sharma",
+   "age": 50]
+]
+
+let mappedArray: [String?] = empArray.dynamicLookup { $0.name }
+
+print(mappedArray)
