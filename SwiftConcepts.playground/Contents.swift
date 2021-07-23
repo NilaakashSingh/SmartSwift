@@ -262,21 +262,21 @@ print(j.count ?? 0)
 let street2: String? = j2.dynamicLookup { $0.address?.street }
 print(street2)
 
-// MARK: - Map
 
-let empArray: [[String: Any]] = [
-  ["name": "Olivier",
-   "age": 30],
-  ["name": "Neel",
-   "age": 34],
-  ["name": "Nitin",
-   "age": 32],
-  ["name": "Mukesh",
-   "age": 21],
-  ["name": "Sharma",
-   "age": 50]
-]
+// MARK: - Higher Order Functions
+// MARK: - Map and Compact Map
+struct Employee {
+    var name: String?
+    var id: Int
+    var earningInDollars: Int
+    var age: Int
+}
 
-let mappedArray: [String?] = empArray.dynamicLookup { $0.name }
+let employee = [Employee(name: "Wakanda", id: 1, earningInDollars: 4000, age: 38),
+                Employee(name: "Zimbawe", id: 2, earningInDollars: 3000, age: 20),
+                Employee(name: nil, id: 3, earningInDollars: 5000, age: 25)]
 
+let mappedArray = employee.map { $0.name }
+let compactMappedArray = employee.compactMap { $0.name }
 print(mappedArray)
+print(compactMappedArray)
