@@ -7,6 +7,8 @@ Few concepts you will find in this repository are,
 * Enum with associate types
 * Property wrappers
 * Dynamic member lookup
+* HOTF - Map
+* HOTF - Compact Map
 <!-- * @Escaping and @non Escaping closures ->
 <!-- * Will set and did set ->
 <!-- * Rethrows ->
@@ -18,8 +20,6 @@ Few concepts you will find in this repository are,
 <!-- * Multiple line string ->
 <!-- * Private set ->
 <!-- * Enumerated ->
-<!-- * HOTF - Map ->
-<!-- * HOTF - FlatMap ->
 <!-- * HOTF - Drop ->
 <!-- * HOTF - DropLast ->
 <!-- * HOTF - DropFirst ->
