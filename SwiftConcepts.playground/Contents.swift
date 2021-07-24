@@ -291,11 +291,13 @@ print(compactMappedArray)
 let dropArray = employee.dropFirst()
 print(dropArray)
 
-let dropIndex = employee.dropLast(1)
-print(dropIndex)
-
 // This works when we have var as employee instance
 // Remove actually removes the element from physical memory
 let removeArray = employeeCopy.remove(at: 1)
 print(removeArray) // This is same
 print(employeeCopy) // As this
+
+// MARK: - Reduce
+
+let reducedEarningArray = employee.map { $0.earningInDollars }.reduce(0, { x,y in x + y })
+print(reducedEarningArray)
