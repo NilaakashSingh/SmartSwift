@@ -9,6 +9,9 @@ Few concepts you will find in this repository are,
 * Dynamic member lookup
 * HOTF - Map
 * HOTF - Compact Map
+* HOTF - Drop
+* HOTF - Remove
+* HOTF - Reduce
 <!-- * @Escaping and @non Escaping closures ->
 <!-- * Will set and did set ->
 <!-- * Rethrows ->
@@ -20,11 +23,8 @@ Few concepts you will find in this repository are,
 <!-- * Multiple line string ->
 <!-- * Private set ->
 <!-- * Enumerated ->
-<!-- * HOTF - Drop ->
-<!-- * HOTF - DropLast ->
-<!-- * HOTF - DropFirst ->
-<!-- * HOTF - Reduce ->
-<!-- * HOTF - Defer ->
-<!-- * HOTF - CaseIterable ->
+
+<!-- * Defer ->
+<!-- * CaseIterable ->
 <!-- * HOTF - Dump ->
 <!-- * HOTF - Property Weak and unowned ->

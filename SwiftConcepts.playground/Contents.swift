@@ -276,7 +276,26 @@ let employee = [Employee(name: "Wakanda", id: 1, earningInDollars: 4000, age: 38
                 Employee(name: "Zimbawe", id: 2, earningInDollars: 3000, age: 20),
                 Employee(name: nil, id: 3, earningInDollars: 5000, age: 25)]
 
+var employeeCopy = [Employee(name: "Wakanda", id: 1, earningInDollars: 4000, age: 38),
+                Employee(name: "Zimbawe", id: 2, earningInDollars: 3000, age: 20),
+                Employee(name: nil, id: 3, earningInDollars: 5000, age: 25)]
+
 let mappedArray = employee.map { $0.name }
 let compactMappedArray = employee.compactMap { $0.name }
 print(mappedArray)
 print(compactMappedArray)
+
+// MARK: - Drop, Remove
+// This works when the employee instance is let as well
+// Drop doesn't delete the actual array it just skips the index or element
+let dropArray = employee.dropFirst()
+print(dropArray)
+
+let dropIndex = employee.dropLast(1)
+print(dropIndex)
+
+// This works when we have var as employee instance
+// Remove actually removes the element from physical memory
+let removeArray = employeeCopy.remove(at: 1)
+print(removeArray) // This is same
+print(employeeCopy) // As this
