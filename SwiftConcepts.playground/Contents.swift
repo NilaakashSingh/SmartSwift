@@ -301,3 +301,43 @@ print(employeeCopy) // As this
 
 let reducedEarningArray = employee.map { $0.earningInDollars }.reduce(0, { x,y in x + y })
 print(reducedEarningArray)
+
+// MARK: - Escaping and Non Escaping Closure
+// Non-Escaping Closure
+func getSumOf(array: [Int], handler: ((Int)->Void)) {
+    var sum: Int = 0
+    handler(sum)
+    for value in array {
+        sum += value
+    }
+    handler(sum)
+}
+
+func doSomething() {
+    getSumOf(array: [16,756,442,6,23]) { (sum) in
+        print(sum)
+        // finishing the execution
+    }
+}
+doSomething()
+
+// Escaping Closure
+func getEscapingSumOf(array:[Int], handler: @escaping ((Int)->Void)) {
+    var sum: Int = 0
+    handler(sum)
+    for value in array {
+        sum += value
+    }
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        handler(sum)
+    }
+}
+
+func doEscapingSomething() {
+    getEscapingSumOf(array: [16,756,442,6,23]) { (sum) in
+        print(sum)
+        // finishing the execution
+    }
+}
+
+doEscapingSomething()
