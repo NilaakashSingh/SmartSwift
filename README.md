@@ -12,7 +12,7 @@ Few concepts you will find in this repository are,
 * HOTF - Drop
 * HOTF - Remove
 * HOTF - Reduce
-* Escaping and non Escaping closures
+* Escaping and Non Escaping Closures
 <!-- * Will set and did set ->
 <!-- * Rethrows ->
 <!-- * Call as Function ->
