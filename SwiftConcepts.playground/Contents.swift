@@ -343,4 +343,13 @@ func doEscapingSomething() {
 doEscapingSomething()
 
 // MARK: - Expressible by string literal
+let url: URL = URL(string: "https://www.google.com")!
+extension URL: ExpressibleByStringLiteral {
+    public init(stringLiteral value: StaticString) {
+        self.init(string: "\(value)")!
+    }
+}
 
+let url2: URL = "https://www.google.com"
+
+// MARK: - Defer
