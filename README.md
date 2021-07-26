@@ -13,6 +13,7 @@ Few concepts you will find in this repository are,
 * HOTF - Remove
 * HOTF - Reduce
 * Escaping and Non Escaping Closures
+* Expressible by string literal
 <!-- * Will set and did set ->
 <!-- * Rethrows ->
 <!-- * Call as Function ->
@@ -23,7 +24,6 @@ Few concepts you will find in this repository are,
 <!-- * Multiple line string ->
 <!-- * Private set ->
 <!-- * Enumerated ->
-
 <!-- * Defer ->
 <!-- * CaseIterable ->
 <!-- * HOTF - Dump ->

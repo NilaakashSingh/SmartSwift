@@ -341,3 +341,6 @@ func doEscapingSomething() {
 }
 
 doEscapingSomething()
+
+// MARK: - Expressible by string literal
+
