@@ -353,3 +353,28 @@ extension URL: ExpressibleByStringLiteral {
 let url2: URL = "https://www.google.com"
 
 // MARK: - Defer
+func myFunc() {
+    print("Step 2")
+    defer { print("Step 3") }
+    print("Step 4")
+}
+
+print("Step 1")
+myFunc()
+print("Step 5")
+
+for i in 1...10 {
+    print ("In \(i)")
+    defer { print ("Deferred \(i)") }
+    print ("Out \(i)")
+}
+
+print("Step 1")
+
+do {
+    defer { print("Step 2") }
+    print("Step 3")
+    print("Step 4")
+}
+
+print("Step 5")
