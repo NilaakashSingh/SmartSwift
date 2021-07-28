@@ -378,3 +378,13 @@ do {
 }
 
 print("Step 5")
+
+// MARK: - Discardable
+
+@discardableResult
+private func newDiscardableMethod() -> Int {
+    return 10 + 40 + 50
+}
+
+// The swift compiler will not throw warnings as method is wrapped by @discardableResult property wrapper.
+newDiscardableMethod()

@@ -15,16 +15,15 @@ Few concepts you will find in this repository are,
 * Escaping and Non Escaping Closures
 * Expressible by string literal
 * Defer
+* Discardable
+* Call as Function
 <!-- * Will set and did set ->
 <!-- * Rethrows ->
-<!-- * Call as Function ->
 <!-- * Static String ->
 <!-- * Zip ->
 <!-- * Result ->
-<!-- * Discardable ->
 <!-- * Multiple line string ->
-<!-- * Private set ->
 <!-- * Enumerated ->
 <!-- * CaseIterable ->
-<!-- * HOTF - Dump ->
-<!-- * HOTF - Property Weak and unowned ->
+<!-- * Dump ->
+<!-- * Property Weak and unowned ->
