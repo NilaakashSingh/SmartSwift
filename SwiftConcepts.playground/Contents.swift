@@ -388,3 +388,6 @@ private func newDiscardableMethod() -> Int {
 
 // The swift compiler will not throw warnings as method is wrapped by @discardableResult property wrapper.
 newDiscardableMethod()
+
+// MARK: - Call as Function
+
