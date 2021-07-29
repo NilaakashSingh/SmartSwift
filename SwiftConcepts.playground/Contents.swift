@@ -391,3 +391,17 @@ newDiscardableMethod()
 
 // MARK: - Call as Function
 
+struct WannabeFunction {
+    func callAsFunction() {
+        print("Hi there")
+    }
+}
+
+// There are three ways to call this
+let f = WannabeFunction()
+
+f() // Callable sugar
+f.callAsFunction() // Member function sugar
+WannabeFunction.callAsFunction(f)() // No sugar
+
+// https://www.vadimbulavin.com/call-as-function-in-swift/
