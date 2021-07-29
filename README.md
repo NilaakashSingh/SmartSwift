@@ -27,3 +27,36 @@ Few concepts you will find in this repository are,
 <!-- * CaseIterable ->
 <!-- * Dump ->
 <!-- * Property Weak and unowned ->
+#### Transforming Operators 
+- Collect
+- Map
+- Map Keypath
+- Flatmap
+- Replace nil
+- Replace empty
+- Scan
+
+#### Filtering Operators
+- Filter
+- Remove Duplicates
+- Compact Map
+- Ignore Output
+- First and Last
+- Drop First, Drop While, Drop Until Output From
+- Prefix
+
+#### Combine Operators
+- Prepend
+- Append
+- SwitchToLatest
+- Merge
+- CombineLatest
+- Zip
+
+#### Sequence Operators
+- Min and Max
+- Output
+- Count
+- Contains
+- AllSatisfy
+- Reduce
