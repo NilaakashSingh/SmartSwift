@@ -17,6 +17,7 @@ Few concepts you will find in this repository are,
 * Defer
 * Discardable
 * Call as Function
+* Result
 <!-- * Will set and did set ->
 <!-- * Rethrows ->
 <!-- * Static String ->
