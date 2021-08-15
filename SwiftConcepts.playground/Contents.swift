@@ -405,3 +405,28 @@ f.callAsFunction() // Member function sugar
 WannabeFunction.callAsFunction(f)() // No sugar
 
 // https://www.vadimbulavin.com/call-as-function-in-swift/
+
+// MARK: - Result
+enum ErrorTypes: Error {
+    case serverDown
+}
+
+func fetchCount(from urlString: String, completionHandler: @escaping (Result<Int, ErrorTypes>) -> Void)  {
+    guard let url = URL(string: urlString) else {
+        completionHandler(.failure(.serverDown))
+        return
+    }
+
+    // complicated networking code here
+    print("Fetching \(url.absoluteString)...")
+    completionHandler(.success(5))
+}
+
+fetchCount(from: "https://google.com") { result in
+    switch result {
+    case .success(let integer):
+        print(integer)
+    case .failure(let error):
+        print(error.localizedDescription)
+    }
+}
